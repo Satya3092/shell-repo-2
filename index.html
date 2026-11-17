@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vibrant Studio | Colorful Static Website</title>
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f8f9fa;
+      color: #2d3436;
+      line-height: 1.6;
+    }
+
+    /* Navigation Bar */
+    header {
+      background: #ffffff;
+      padding: 1rem 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #2d3436;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ff6b6b;
+    }
+
+    /* Colorful Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #ff6b6b 0%, #feca57 50%, #48dbfb 100%);
+      color: #ffffff;
+      text-align: center;
+      padding: 100px 20px;
+      clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ffffff;
+      color: #ff6b6b;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      background: #2d3436;
+      color: #ffffff;
+    }
+
+    /* Colorful Cards Section */
+    .features {
+      padding: 60px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+      color: #2d3436;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      padding: 30px;
+      border-radius: 16px;
+      color: #ffffff;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+    }
+
+    .card-1 { background: linear-gradient(135deg, #ff758c, #ff7eb3); }
+    .card-2 { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+    .card-3 { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #1e272e; }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    /* Call to Action Banner */
+    .cta-banner {
+      background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+      margin: 40px 5%;
+      padding: 50px 20px;
+      border-radius: 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .cta-banner h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    /* Footer */
+    footer {
+      background: #2d3436;
+      color: #dfe6e9;
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 50px;
+    }
+
+    /* Mobile Adjustments */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.2rem; }
+      header { flex-direction: column; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="logo">ColorPop</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <h1>Bring Your Ideas to Life</h1>
+    <p>A bright, fast, and responsive static website built purely with clean HTML and modern CSS gradients.</p>
+    <a href="#features" class="btn">Explore Colors</a>
+  </section>
+
+  <!-- Feature Cards -->
+  <section class="features" id="features">
+    <h2 class="section-title">Why Choose Bright Design?</h2>
+    <div class="card-grid">
+      <div class="card card-1">
+        <h3>Bold Gradients</h3>
+        <p>Eye-catching color transitions create visual energy and guide visitors smoothly through your content.</p>
+      </div>
+      <div class="card card-2">
+        <h3>Zero Dependencies</h3>
+        <p>Built with standard HTML5 and CSS3, ensuring instant loading speeds without heavy external libraries.</p>
+      </div>
+      <div class="card card-3">
+        <h3>Mobile Friendly</h3>
+        <p>CSS Grid and Flexbox automatically adapt cards and navigation menus to fit phones, tablets, and desktops.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner -->
+  <section class="cta-banner" id="contact">
+    <h2>Ready to Launch Your Page?</h2>
+    <p style="margin-bottom: 20px;">Customize the hex codes in the CSS to match your personal brand or project theme.</p>
+    <a href="mailto:hello@example.com" class="btn">Say Hello</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 ColorPop Static Website. Built with HTML &amp; CSS.</p>
+  </footer>
+
+</body>
+</html>
